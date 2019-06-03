@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+<!--
+      _  _____   __  __ _                                                   
+     | |/ ____| |  \/  (_)                                                  
+     | | (___   | \  / |_ _ __   ___  _____      _____  ___ _ __   ___ _ __ 
+ _   | |\___ \  | |\/| | | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
+| |__| |____) | | |  | | | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |   
+ \____/|_____/  |_|  |_|_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|   
+                                                           | |              
+                                                           |_|              
+Written by Selim Krisztián Nahimi
+-->
+
+	<title>JS Aknakereső - Nahimi Selim Krisztián</title>
+	<link href="./css/style.css" rel="stylesheet">
+
+	<!-- SCRIPTS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script src="js/app.js"></script>
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Russo+One" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+
+	<!-- FONT AWESOME ICONS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="title-wrapper">
+			<h1 id="title">js aknakereső</h1>
+			<h3 id="writtenby"><a target="_blank" href="https://bitbucket.org/huncamper/es2020-r1-46/src/master/">Készítette: Selim Nahimi</a></h3>
+			<table id="counter-wrapper">
+				<tr>
+					<td id="timer"><span>0</span> <i class="far fa-clock"></i></td>
+					<td id="counter"><i class="far fa-flag"></i> <span>0</span></td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- PLAYFIELD -->
+		<div id="gamewrapper">
+			<div id="newgamewindow">
+				<i id="failmessage"></i>
+				<h2>új játék kezdése</h2>
+				<h3>válassz módot:</h3>
+				<ul>
+					<li id="easy">- <b>Könnyű</b> (9x9) -</li><br>
+					<li id="hard">- <b>Nehéz</b> (16x16) -</li>
+				</ul>
+			</div>
+
+			<h1 id="enablejs">a javascriptnek engedélyezve kell lennie, hogy játszhass.</h1>
+
+			<table id="playfield" class="noselect">
+			</table>
+
+		</div>
+	</div>
+</body>
+
+</html>

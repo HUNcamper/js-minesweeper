@@ -1,0 +1,256 @@
+* {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: rgb(50, 50, 50);
+}
+
+a {
+	text-decoration: none;
+}
+
+.noselect {
+	-webkit-user-select: none;    
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#newgamewindow {
+	position: absolute;
+	margin: 0 auto;
+	width: 20%;
+	min-width: 350px;
+	border-style: solid;
+
+	background-color: rgba(100, 100, 100, 0.75);
+
+	font-family: 'Russo One', sans-serif;
+
+	left:50%;
+	top:50%;
+
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	display: none;
+}
+
+#failmessage {
+	color: #700;
+}
+
+#newgamewindow h2 {
+	font-family: 'Major Mono Display', monospace;
+	text-decoration: underline;
+
+	padding-bottom: 10px;
+}
+
+#newgamewindow h3 {
+}
+
+#newgamewindow ul li {
+	display: inline-block;
+	cursor: pointer;
+	list-style: none;
+	color: #300;
+}
+
+#newgamewindow ul li:hover {
+	text-decoration: underline;
+	color: #700;
+}
+
+#gamewrapper {
+	margin: 0 auto;
+	/*display: inline-block;*/
+
+	width: 40%;
+	min-width: 700px;
+
+	z-index: 1;
+}
+
+#playfield {
+	width: 100%;
+	height: 100%;
+	table-layout: fixed;
+
+	margin: 0 auto;
+	border-spacing: 0;
+	font-family: 'Russo One', sans-serif;
+	font-size: 24px;
+}
+
+#enablejs {
+	font-family: 'Major Mono Display', monospace;
+}
+
+#counter-wrapper {
+	font-family: 'Press Start 2P', cursive;
+	width: 50%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#counter-wrapper tr td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 50%;
+}
+
+#counter-wrapper tr td i.far {
+	font-size: 18px;
+	position: absolute;
+}
+
+#timer {
+	color: green;
+
+	text-align: right;
+
+	padding-right: 25px;
+
+	border-width: 0px;
+	border-style: solid;
+	border-color: #111;
+
+	border-right-width: 3px;
+	border-top-width: 3px;
+	border-bottom-width: 3px;
+}
+
+#timer span {
+	padding-right: 10px;
+}
+
+#counter {
+	color: blue;
+	
+	text-align: left;
+
+	padding-left: 10px;
+
+	border-width: 0px;
+	border-style: solid;
+	border-color: #111;
+
+	border-left-width: 3px;
+	border-top-width: 3px;
+	border-bottom-width: 3px;
+}
+
+#counter span {
+	padding-left: 30px;
+}
+
+td.cell {
+	color: black;
+
+	/*width: 50px;
+	height: 50px;*/
+	width: 5%;
+	height: 5%;
+	text-align: center;
+	cursor: pointer;
+
+	border-color: rgb(70, 70, 70);
+	border-width: 3px;
+	border-style: outset;
+
+	background-color: rgb(100, 100, 100);
+	transition: background-color .1s;
+}
+
+td.cell.revealed {
+	background-color: rgb(150, 150, 150);
+	border-style: double;
+	border-color: rgb(100, 100, 100);
+}
+
+td.cell.revealed:hover {
+	border-color: rgb(0, 0, 0);
+}
+
+td.cell.revealed.bomb {
+	color: red;
+	background-color: rgb(100, 0, 0);
+}
+
+td.cell.flag {
+	color: #333;
+
+    background-color: rgb(0, 180, 0);
+}
+
+td.cell.flag:hover {
+	background-color: rgb(0, 240, 0);
+}
+
+td.cell:hover {
+	background-color: rgb(255, 255, 255);
+}
+
+td.cell.flag.bomb {
+	background-color: rgb(0, 240, 0);
+}
+
+#title-wrapper {
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	z-index: 0;
+}
+
+#writtenby a {
+	color: gray;
+	transition: color .2s;
+}
+
+#writtenby a:hover {
+	color: red;
+	transition: color .2s;
+}
+
+#title {
+	font-family: 'Major Mono Display', monospace;
+}
+
+#writtenby {
+	font-family: 'Russo One', sans-serif;
+}
+
+div.wrapper {
+	height: 100vh;
+	width: 100vw;
+
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-height: 920px) {
+	#title-wrapper {
+		position: relative;
+	}
+}
+
+@media all and (max-width: 1200px) {
+	#gamewrapper {
+		width: 80%;
+	}
+
+	#title-wrapper {
+		position: relative;
+	}
+}
